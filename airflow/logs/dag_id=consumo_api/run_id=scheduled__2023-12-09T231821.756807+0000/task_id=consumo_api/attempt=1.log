@@ -1,0 +1,35 @@
+[2023-12-09T23:23:44.535+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: consumo_api.consumo_api scheduled__2023-12-09T23:18:21.756807+00:00 [queued]>
+[2023-12-09T23:23:44.570+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: consumo_api.consumo_api scheduled__2023-12-09T23:18:21.756807+00:00 [queued]>
+[2023-12-09T23:23:44.570+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-09T23:23:44.571+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-12-09T23:23:44.572+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-09T23:23:44.611+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): consumo_api> on 2023-12-09 23:18:21.756807+00:00
+[2023-12-09T23:23:44.621+0000] {standard_task_runner.py:55} INFO - Started process 1190 to run task
+[2023-12-09T23:23:44.626+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'consumo_api', 'consumo_api', 'scheduled__2023-12-09T23:18:21.756807+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/tmp/tmphzx8z3mn']
+[2023-12-09T23:23:44.627+0000] {standard_task_runner.py:83} INFO - Job 3: Subtask consumo_api
+[2023-12-09T23:23:44.743+0000] {task_command.py:388} INFO - Running <TaskInstance: consumo_api.consumo_api scheduled__2023-12-09T23:18:21.756807+00:00 [running]> on host e778b83244f8
+[2023-12-09T23:23:44.901+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=consumo_api
+AIRFLOW_CTX_TASK_ID=consumo_api
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-09T23:18:21.756807+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-12-09T23:18:21.756807+00:00
+[2023-12-09T23:23:44.913+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-12-09T23:23:44.916+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker run --rm docker:latest docker run eltonguilherme15186/repo:v1.0']
+[2023-12-09T23:23:44.939+0000] {subprocess.py:86} INFO - Output:
+[2023-12-09T23:23:45.152+0000] {subprocess.py:93} INFO - docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+[2023-12-09T23:23:45.153+0000] {subprocess.py:93} INFO - See 'docker run --help'.
+[2023-12-09T23:23:45.155+0000] {subprocess.py:97} INFO - Command exited with return code 125
+[2023-12-09T23:23:45.176+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 125.
+[2023-12-09T23:23:45.191+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=consumo_api, task_id=consumo_api, execution_date=20231209T231821, start_date=20231209T232344, end_date=20231209T232345
+[2023-12-09T23:23:45.223+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3 for task consumo_api (Bash command failed. The command returned a non-zero exit code 125.; 1190)
+[2023-12-09T23:23:45.249+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-12-09T23:23:45.281+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
