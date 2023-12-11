@@ -55,7 +55,7 @@ Para executar o projeto, siga as seguintes etapas:
 
 2 - Para iniciar o scheduler, ainda dentro do container, digite: `airflow scheduler`. Depois digite exit para retornar ao terminal.
 
-## Scheduler
+## Scheduler - código rodando de 5 em 5 min
 
 ![airf scheduler 2](https://github.com/elton-datasc/moedas_cotacoes_airflow/assets/67129543/c9c622fe-e1dd-4ebe-b0e2-5d83b8105a1b)
 
