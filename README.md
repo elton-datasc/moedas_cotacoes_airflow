@@ -22,7 +22,9 @@ O arquivo main.py contém as funções para coletar e processar os dados. As fun
 
 O arquivo `Dockerfile` é usado para criar uma imagem Docker que contém o projeto e todas as suas dependências. A imagem Docker é baseada na imagem oficial do Python 3.8 e inclui a biblioteca Apache Airflow. A imagem Docker também copia o script Python e o arquivo DAG para o contêiner.
 
-No projeto também consta um docker-compose com maiores possibilidades de configuração.
+No projeto também consta um docker-compose com maiores possibilidades de configuração. Este arquivo está na documentação do Docker na página : https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html
+
+arquivo : https://airflow.apache.org/docs/apache-airflow/2.7.3/docker-compose.yaml
 
 ### my_dag.py
 
@@ -35,6 +37,17 @@ Para executar o projeto, siga as seguintes etapas:
 
 1 - Crie uma imagem Docker a partir do Dockerfile com o comando `docker build -t my_project .`.
 
+![image](https://github.com/elton-datasc/moedas_cotacoes_airflow/assets/67129543/62a655fd-1de4-4015-a2ce-964aaebba9d9)
+
+
 2 - Execute o contêiner Docker com o comando `docker run -p 8080:8080 my_project`.
 
 3 - Acesse a interface do usuário do Apache Airflow em `http://localhost:8080`.
+
+### Adicionais
+
+1 -  Para criar um usuário e senha, acesse o container via terminal com : 
+
+airflow users create --username admin --password admin --firstname Anonymous --lastname Admin --role Admin --email admin@example.org
+
+2 - Para iniciar o scheduler, ainda dentro do container, digite: airflow scheduler. Depois digite exit para retornar ao terminal.
