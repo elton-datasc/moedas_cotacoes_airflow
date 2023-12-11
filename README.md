@@ -51,14 +51,17 @@ Para executar o projeto, siga as seguintes etapas:
 
 1 -  Para criar um usuário e senha, acesse o container via terminal com : 
 
-airflow users create --username admin --password admin --firstname Anonymous --lastname Admin --role Admin --email admin@example.org
+`airflow users create --username admin --password admin --firstname Anonymous --lastname Admin --role Admin --email admin@example.org`
 
-2 - Para iniciar o scheduler, ainda dentro do container, digite: airflow scheduler. Depois digite exit para retornar ao terminal.
+2 - Para iniciar o scheduler, ainda dentro do container, digite: `airflow scheduler`. Depois digite exit para retornar ao terminal.
 
-## Scheduler e output
+## Scheduler
 
 ![airf scheduler 2](https://github.com/elton-datasc/moedas_cotacoes_airflow/assets/67129543/c9c622fe-e1dd-4ebe-b0e2-5d83b8105a1b)
 
-![terminão cotações](https://github.com/elton-datasc/moedas_cotacoes_airflow/assets/67129543/6d0d3506-d8ee-4db9-ac01-19fd10a8d244)
+### Output
+
+![terminão cotações2](https://github.com/elton-datasc/moedas_cotacoes_airflow/assets/67129543/b53cdb53-b4fc-41ea-8bf3-1beadbdd073a)
+
 
 
