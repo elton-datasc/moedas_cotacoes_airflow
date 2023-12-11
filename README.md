@@ -1,5 +1,8 @@
 ### O projeto  que coleta e processa dados de várias APIs para fornecer informações sobre cotações de moedas, índices econômicos e outras informações financeiras,compilando estes dados num dataframe. O projeto é composto por três arquivos principais: main.py, Dockerfile e my_dag.py.
 
+![image](https://github.com/elton-datasc/moedas_cotacoes_airflow/assets/67129543/1fa362c9-95a8-41de-9941-805f0ee36594)
+
+
 ## Descrição dos Arquivos
 
 ### main.py
